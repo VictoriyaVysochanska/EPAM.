@@ -1,0 +1,39 @@
+package dz3;
+
+public class Triangles {
+
+    public static void stars (int c) {
+        int i = 0;
+
+        while (i < c) {
+            i++;
+            int j=i;
+            while (j > 0) {
+                j--;
+                System.out.print("*");
+            }
+System.out.println();
+        }
+        while(i<=c && i>0){
+            --i;
+            int j=i;
+            while(j>0){
+              --j;
+                System.out.print("*");
+            }
+System.out.println();
+        }
+
+    }
+
+    public static void main(String[] args) {
+        stars(5);
+    }
+}
+
+
+
+
+
+
+
