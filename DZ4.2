@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Bit {
+
+        public String str = "";
+
+        public void binar(int a) {
+            int b;
+            String temp = "";
+            while (a != 0) {
+                b = a % 2;
+                temp = b + temp;
+                a = a / 2;
+            }
+            this.str += temp;
+        }
+        public static void main(String [] args) {
+            Bit bit = new Bit();
+            Scanner scan = new Scanner(System.in);
+            Integer temp = scan.nextInt();
+            bit.binar(temp);
+            System.out.print(bit.str);
+
+
+        }
+    }
