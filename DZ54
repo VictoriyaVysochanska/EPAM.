@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Mass {
 
-        static int getLength(int[] arr){
+        static int Len(int[] arr){
             int leng = 0;
             for(int i=0; i< arr.length; i++){
                 if(arr[i]<0){
@@ -12,8 +12,8 @@ public class Mass {
             }
             return leng;
         }
-        static int[] getNegativeArr(int[] arr){
-            int[] negativeArr = new int[getLength(arr)];
+        static int[] Neg(int[] arr){
+            int[] negativeArr = new int[Len(arr)];
             for (int i = 0, a=0; i<arr.length; i++){
                 if (arr[i]<0){
                     negativeArr[a] = arr[i];
@@ -23,16 +23,16 @@ public class Mass {
             return negativeArr;
 
         }
-        static int[] getPositive(int[] arr){
-            int leng = arr.length - getLength(arr);
-            int[] positiveArr = new int[leng];
+        static int[] Pos(int[] arr){
+            int leng = arr.length - Len(arr);
+            int[] positive = new int[leng];
             for(int i=0, a=0; i<arr.length; i++){
                 if (arr[i]>= 0){
-                    positiveArr[a] = arr[i];
+                    positive[a] = arr[i];
                     a++;
                 }
             }
-            return positiveArr;
+            return positive;
         }
 
     public static void main(String[] args) {
@@ -43,7 +43,7 @@ public class Mass {
                 result [i] = scan.nextInt();
             }
 
-        System.out.println(Arrays.toString(getNegativeArr(result)));
-        System.out.println(Arrays.toString(getPositive(result)));
+        System.out.println(Arrays.toString(Neg(result)));
+        System.out.println(Arrays.toString(Pos(result)));
     }
 }
