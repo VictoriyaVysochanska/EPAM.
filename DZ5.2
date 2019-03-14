@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Uneven {
+    private static int[] setArray (int dly) {
+        int[] arr = new int[dly];
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = (int)(Math.random() * 20);
+        }
+        return arr;
+    }
+
+    public static void main(String[] args) {
+            int size;
+            int[] arr;
+            System.out.print("Длина массива:");
+            Scanner in = new Scanner(System.in);
+            size = in.nextInt();
+            arr = setArray(size);
+
+            System.out.print("Массив:");
+            int j = 0;
+            int k = 0;
+            for(int i : arr) {
+                System.err.print(i + "  ");
+                if (i % 2 != 0) {
+                    j++;
+                    k = k + i;
+                }
+            }
+            System.out.println("\nКоличество: " + j);
+            System.out.println("Сумма нечетных: = " + k);
+        }
+
+    }
+
+
